@@ -7,11 +7,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
 
 @Configuration
 public class BeanConfig {
 
+    //Creating bean of ChromeDriver and passing it to Spring context
     @Bean
+    @Scope("driverscope")
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     public WebDriver chromeDriverBean(){
         System.setProperty("webdriver.chrome.driver", "src/test/java/chromedriver.exe");
