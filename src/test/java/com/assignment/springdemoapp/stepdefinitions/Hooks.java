@@ -34,4 +34,9 @@ public class Hooks {
             screenshotUtil.attachScreenshotToScenario(scenario);
         }
     }
+
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
 }

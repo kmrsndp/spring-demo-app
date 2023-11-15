@@ -1,9 +1,7 @@
 package com.assignment.springdemoapp.runner;
 
-import io.cucumber.junit.Cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 
@@ -16,7 +14,6 @@ import org.testng.annotations.DataProvider;
         tags = "@Smoke"
 )
 
-@RunWith(Cucumber.class)
 public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
 
     @Override
